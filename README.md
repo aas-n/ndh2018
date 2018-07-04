@@ -29,7 +29,7 @@ Here are the rules:
 * This flag enables us to SSH as `level2` into ```/wargames/level2```, etc.
 * The main goal is to read `level10`'s ```validation/flag```.
 
-During NDH2018, VMs kicked challengers after 60 minutes and passwords were re-generated.
+During NDH2018, VMs used to kick challengers after 60 minutes and passwords used to be re-generated each time.
 
 ## Challenge 1
 We connect to `level1`:
