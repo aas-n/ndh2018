@@ -1,5 +1,5 @@
 # Write-up [```NDH2018```](https://lehack.org/)  
-Privilege escalation challenges created for [Harmonie-Technologie](https://www.harmonie-technologie.com/) exhibition stand @ NDH16 (Paris)
+Privilege escalation challenges I made for [Harmonie-Technologie](https://www.harmonie-technologie.com/) exhibition stand @ NDH16 (Paris)
 
 ## Index
 
