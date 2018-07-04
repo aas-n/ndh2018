@@ -249,7 +249,7 @@ Matching Defaults entries for level6 on harmonie-technologie:
 User level6 may run the following commands on harmonie-technologie:
     (level6_OK) NOPASSWD: /usr/bin/1up
 ```
-`1up` is setuid bit, so we can execute it as `level6_OK`. Let's execute it.
+`1up` is executed as `level6_OK`. Let's go.
 ```bash
 level6@harmonie-technologie:~$ sudo -u level6_OK /usr/bin/1up 
 == Harmonie-Technologie ==
