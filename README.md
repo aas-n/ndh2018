@@ -383,9 +383,9 @@ raptor_udf2.c                100%[============================================>]
 ```
 We compile our source code, and we execute `mysql`
 ```bash
-gcc -g -c raptor_udf2.c
-gcc -g -shared -Wl,-soname,raptor_udf2.so -o raptor_udf2.so raptor_udf2.o -lc
-cd ; ./mysql
+level9@harmonie-technologie:~$ gcc -g -c raptor_udf2.c
+level9@harmonie-technologie:~$ gcc -g -shared -Wl,-soname,raptor_udf2.so -o raptor_udf2.so raptor_udf2.o -lc
+level9@harmonie-technologie:~$ cd ; ./mysql
 ```
 We execute these `mysql` commands
 ```bash
