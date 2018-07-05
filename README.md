@@ -69,6 +69,7 @@ dr-x------ 2 level1_OK level1_OK 4096 May 22 08:36 .
 dr-xr-x--- 3 level1    level1    4096 Jun 13 10:38 ..
 -r-------- 1 level1_OK level1_OK   73 Jun 13 09:53 flag
 level1_OK@harmonie-technologie:~$ cat flag 
+
 Identifiants SSH :
 login : level2
 mdp : 9a8589dac2fdf54ffb9aed5bbd3d40f5 
@@ -91,6 +92,7 @@ We are allowed to spawn a bash shell as `level2_OK`. Let's do this, and let's re
 ```bash
 level2@harmonie-technologie:~$ sudo -u level2_OK /bin/bash
 level2_OK@harmonie-technologie:/wargames/level2$ cat validation/flag 
+
 Identifiants SSH :
 login : level3
 mdp : ec3ae40face0433f0a8333396d73f17a
@@ -139,7 +141,8 @@ Change: 2018-07-04 14:59:41.983335199 -0500
  ```
  We can see that `/tmp/flag` is then created, with our flag in it
  ```bash
- level3@harmonie-technologie:~$ cat /tmp/flag 
+level3@harmonie-technologie:~$ cat /tmp/flag
+ 
 Identifiants SSH :
 login : level4
 mdp : 1dff8183db0c37844e7a3cb00787ed1d
@@ -223,6 +226,7 @@ level5@harmonie-technologie:/tmp$ /wargames/level5/level5 a
 $ whoami
 level5_OK
 $ cat /wargames/level5/validation/flag
+
 Identifiants SSH
 login : level6
 mdp : dd37daab8527108ecef8c8d8da901dd4
@@ -264,6 +268,7 @@ Now we are `level6_OK`, but into a limited shell. We can't do lot of things... T
 level6_OK:~$ echo FREEDOM! && cd () bash && cd
 FREEDOM!
 level6_OK@harmonie-technologie:~$ cat flag
+
 Identifiants SSH :
 login : level7
 mdp : ed157267bb12163a0aff440a30465565
@@ -347,7 +352,8 @@ individual files in /usr/share/doc/*/copyright.
 
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
-level8_OK@harmonie-technologie:~$ cat flag 
+level8_OK@harmonie-technologie:~$ cat flag
+
 Identifiants SSH :
 login : level9
 mdp : b9581507cf0b6d50f0e49e784b2e7a1a
@@ -403,7 +409,8 @@ Bye
 ```
 We can now read the flag
 ```bash
-level9@harmonie-technologie:~$ cat /tmp/lev9 
+level9@harmonie-technologie:~$ cat /tmp/lev9
+
 Identifiants SSH :
 login : levelfinal
 mdp : 181b70c897ddd4a4673d5794206379b7
