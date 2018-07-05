@@ -14,7 +14,7 @@ Privilege escalation challenges I made for [Harmonie-Technologie](https://www.ha
 | [Challenge 6](#challenge-6)  | Escaping |
 | [Challenge 7](#challenge-7)  | Double wildcard |
 | [Challenge 8](#challenge-8)  | Weak SSH public key |
-| [Challenge 9](#challenge-9)  | mysql launched by root |
+| [Challenge 9](#challenge-9)  | MySql UDF |
 | [Challenge 10](#challenge-10)  | ASLR Buffer overflow |
 
 ## About  
