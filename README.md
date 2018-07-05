@@ -282,7 +282,7 @@ Matching Defaults entries for level7 on harmonie-technologie:
 User level7 may run the following commands on harmonie-technologie:
     (level7_OK) NOPASSWD: sudoedit /wargames/level7/*/*/hello.html
 ```
-The double wildcard catches our attention. We look for a privilege escalation exploit on internet and find [this](https://www.exploit-db.com/exploits/37710/). But, we are not allowed to create files in these directories. But there is a way to fool our `sudoedit`.
+The double wildcard catches our attention. We look for a privilege escalation exploit on internet and find [this](https://www.exploit-db.com/exploits/37710/). Unfortunately, we are not allowed to create files in these directories. But there is a way to fool our `sudoedit` with spaces.
 ```bash
 sudoedit -u level7_OK /wargames/level7/ validation/flag /hello.html
 ```
