@@ -18,7 +18,7 @@ Privilege escalation challenges made for [Harmonie-Technologie](https://www.harm
 | [Challenge 10](#challenge-10)  | ASLR Buffer overflow |
 
 ## About  
-The vulnerable virtual machine can be downloaded [here](availableSoon):
+The vulnerable virtual machine can be downloaded [here](https://fromsmash.com/199e92b2-812b-11e8-96b4-06d04ae87646):
 * 32 bits
 * 3,8 Go
 * md5sum: 70968aaee90cb84f51b4769f54eba19e
