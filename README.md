@@ -1,5 +1,5 @@
 # Write-up [```NDH2018```](https://lehack.org/)  
-Privilege escalation challenges I made for [Harmonie-Technologie](https://www.harmonie-technologie.com/) exhibition stand @ NDH16 (Paris)
+Privilege escalation challenges made for [Harmonie-Technologie](https://www.harmonie-technologie.com/) exhibition stand @ NDH16 (Paris)
 
 ## Index
 
@@ -18,10 +18,10 @@ Privilege escalation challenges I made for [Harmonie-Technologie](https://www.ha
 | [Challenge 10](#challenge-10)  | ASLR Buffer overflow |
 
 ## About  
-The vulnerable virtual machine can be downloaded [here](https://www.):
+The vulnerable virtual machine can be downloaded [here](availableSoon):
 * 32 bits
-* 7 Go
-* md5sum: xxxxxx
+* 3,8 Go
+* md5sum: 70968aaee90cb84f51b4769f54eba19e
 
 Here are the rules:
 * First, we SSH as `level1` into ```/wargames/level1/```
