@@ -24,7 +24,7 @@ The vulnerable virtual machine can be downloaded [here](https://fromsmash.com/19
 * md5sum: 70968aaee90cb84f51b4769f54eba19e
 
 Here are the rules:
-* First, we SSH as `level1` into ```/wargames/level1/```
+* First, we SSH as `level1:73e5fe8dd943659ef46dd638c1ff2e9d` into ```/wargames/level1/```
 * Our goal is to elevate our privileges as `level1_OK` to read the ```validation/flag``` file.
 * This flag enables us to SSH as `level2` into ```/wargames/level2```, etc.
 * The main goal is to read `level10`'s ```validation/flag```.
