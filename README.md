@@ -24,7 +24,7 @@ The vulnerable virtual machine can be downloaded [here](https://fromsmash.com/19
 * md5sum: 70968aaee90cb84f51b4769f54eba19e
 
 Here are the rules:
-* First, we SSH as `level1:73e5fe8dd943659ef46dd638c1ff2e9d` into ```/wargames/level1/```
+* First, we SSH as `level1` into ```/wargames/level1/```
 * Our goal is to elevate our privileges as `level1_OK` to read the ```validation/flag``` file.
 * This flag enables us to SSH as `level2` into ```/wargames/level2```, etc.
 * The main goal is to read `level10`'s ```validation/flag```.
@@ -32,7 +32,7 @@ Here are the rules:
 During NDH2018, VMs used to kick challengers after 60 minutes and passwords used to be re-generated each time.
 
 ## Challenge 1
-We connect to `level1`:
+We connect to `level1` with password `73e5fe8dd943659ef46dd638c1ff2e9d`:
 ```bash
 ssh level1@192.168.0.10
 ```
@@ -100,7 +100,7 @@ mdp : ec3ae40face0433f0a8333396d73f17a
 >level3:ec3ae40face0433f0a8333396d73f17a
 
 ## Challenge 3
-We can see a `script.sh` file in out directory with `ls` command.
+We can see a `script.sh` file in our directory with `ls` command.
 ```bash
 level3@harmonie-technologie:~$ ls -la
 total 20
