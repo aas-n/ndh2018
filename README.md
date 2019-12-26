@@ -1,6 +1,8 @@
 # Write-up [```NDH2018```](https://lehack.org/)  
 Privilege escalation challenges made for [Harmonie-Technologie](https://www.harmonie-technologie.com/) exhibition stand @ NDH16 (Paris)
 
+<p align="center"><img src="https://blog.yeswehack.com/wp-content/uploads/2018/06/ndh16_ywh.png"></p>
+
 ## Index
 
 | Title        | Description   |
